@@ -1,0 +1,205 @@
+/* filepath: /Users/lee/Local Sites/oasis-outdoor-living-uk-ltd/app/public/wp-content/plugins/A[LEE]X-Shopper/assets/css/shopper-results-card.css */
+.alx-shopper-results {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 24px !important;
+    margin-top: 5px !important;
+    margin-bottom: 30px !important;
+    padding: 0 !important;
+    width: 100%;
+    box-sizing: border-box;
+    /* Remove any float or absolute positioning if present */
+    float: none;
+    position: static;
+}
+
+.alx-shopper-product,
+.alx-product {
+    background: rgba(110, 110, 110, 0.673) !important;
+    background-blend-mode: hard-light !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 24px rgba(31,38,135,0.10) !important;
+    padding: 22px 16px 18px 16px !important;
+    text-align: center !important;
+    transition: box-shadow 0.22s, transform 0.18s !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    color: #222330 !important;
+    /* Remove or adjust the border below as needed */
+    border: none !important;
+    backdrop-filter: blur(30px) !important;
+}
+
+.alx-shopper-product:hover,
+.alx-product:hover {
+    box-shadow: 0 8px 32px rgba(31,38,135,0.18) !important;
+    transform: translateY(-4px) scale(1.025) !important;
+}
+
+.alx-shopper-product img,
+.alx-product img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 10px !important;
+    margin-bottom: 14px !important;
+    /* box-shadow: 0 2px 12px rgba(31,38,135,0.07) !important; */
+    background: transparent !important;
+}
+
+.alx-shopper-product h3,
+.alx-product h3 {
+    font-size: 1.15rem !important;
+    margin: 0 0 8px 0 !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.3px !important;
+}
+
+.alx-shopper-price {
+    margin: 10px 0 8px 0 !important;
+    font-size: 1.4em !important;
+    color: #323232 !important;
+    font-weight: bold !important;
+    letter-spacing: 0.2px !important;
+}
+.alx-shopper-actions {
+    width: 100%;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.alx-quick-view-price {
+    color: #7ecbff !important; /* lighter blue */
+    font-size: 1.4em !important;
+    font-weight: bold !important;
+    letter-spacing: 0.2px !important;
+    margin: 10px 0 8px 0 !important;
+}
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .alx-quick-view-content {
+        padding: 18px 6vw 18px 6vw;
+    }
+    .alx-quick-view-close {
+        top: 8px; right: 8px;
+        width: 32px; height: 32px; font-size: 22px; line-height: 32px;
+    }
+}
+
+#alx-shopper-results-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(24, 24, 26, 0.82);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+#alx-shopper-results-overlay .alx-shopper-results {
+    max-width: 1100px;
+    width: 92vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: rgba(255,255,255,0);
+    border-radius: 18px;
+    box-shadow: 0px 8px rgba(31, 38, 135, 0.18);
+    padding: 36px 28px 28px 28px;
+    border: 1.5px solid rgba(255,255,255,0.35);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 24px !important;
+    margin: 0 !important;
+}
+.alx-shopper-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.08em;
+    font-weight: 700;
+    background: linear-gradient(90deg, #2196f3 0%, #003366 100%);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    box-shadow: 0 2px 12px rgba(33,150,243,0.10);
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
+}
+.alx-shopper-btn:hover {
+    background: linear-gradient(90deg, #003366 0%, #2196f3 100%) !important;
+    color: #fff;
+    box-shadow: 0 4px 18px rgba(33,150,243,0.18);
+}
+.alx-shopper-btn,
+.alx-shopper-btn.alx-view-product-btn,
+.alx-shopper-btn.alx-quick-view-btn,
+.alx-modal-view-product {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.08em;
+    font-weight: 700;
+    background: linear-gradient(90deg, #2196f3 0%, #003366 100%);
+    color: #fff !important;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    box-shadow: 0 2px 12px rgba(33,150,243,0.10);
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin: 0;
+    text-decoration: none !important;
+    text-transform: none !important;
+}
+
+.alx-modal-view-product:hover {
+    background: linear-gradient(90deg, #003366 0%, #2196f3 100%);
+    color: #fff !important;
+    box-shadow: 0 4px 18px rgba(33,150,243,0.18);
+}
+.alx-shopper-relax-msg {
+    background: #ffeeba;
+    color: #856404;
+    padding: 12px 18px;
+    border-radius: 16px;
+    margin: 0px 0px;
+    font-weight: bold;
+    max-height: 90px;           /* Set your preferred max height */
+    overflow-y: auto;           /* Enable vertical scroll if content is too tall */
+    box-sizing: border-box;
+}
+.alx-shopper-share a {
+    margin-right: 8px;
+    font-size: 1.2em;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+.alx-shopper-share a:hover {
+    opacity: 1;
+}
+.alx-shopper-wrapper {
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 254, 254, 0.604);
+    border-radius: 18px;
+    font-family: Arial, sans-serif;
+    padding: 8px 8px;
+    width: 100%;
+    /* Add width: 100% to ensure it fills the parent */
+}
+
+/* Show when results are present (add this class with JS) */
+.alx-shopper-wrapper.alx-has-results {
+    display: flex;
+}
